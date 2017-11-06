@@ -34,6 +34,11 @@ namespace cache_proxy
             else
             {
                 this.Show();
+                try
+                {
+                    dataGridView1.FirstDisplayedScrollingRowIndex = dataGridView1.RowCount - 1;
+                }
+                catch { }
             }
         }
 
@@ -130,6 +135,11 @@ namespace cache_proxy
         {
             //use cache
             toggleCache();
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            
         }
     }
 }

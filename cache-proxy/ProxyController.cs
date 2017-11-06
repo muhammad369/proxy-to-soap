@@ -133,13 +133,14 @@ namespace cache_proxy
 
         private void log(string url, string action, bool cache, string method)
         {
-            Form1.list.Insert(0, new LogItem() {
+            Form1.list.Add( new LogItem() {
                 url= url,
                 action= action,
                 fromCache= cache,
                 method= method,
                 time= DateTime.Now
             });
+            
         }
 
 
